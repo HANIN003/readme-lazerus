@@ -45,7 +45,7 @@ function renderLicenseSection(license) {
     return ""
 
   } else {
-    return "## Licenses  This application is covered under the: ${data.license} license."
+    return `## Licenses  This application is covered under the: ${data.license} license. Follow the link for more info: ${renderLicenseLink(data.license)}`
   }
 }
 
@@ -73,7 +73,7 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## License
-  ${data.license}
+  ${renderLicenseSection}
 
   ## Contributing
   ${data.contributing}
