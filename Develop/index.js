@@ -29,11 +29,18 @@ const questions = [
     },
 
     {
-        type: "input",
-        name: "features",
-        message: "Please list the features your project uses.",
+        type: "list",
+        name: "license",
+        message: "Please choose a license for your project.",
+        choices: ["MIT", "GNU GPLv3", "Apache", "Mozilla"],
     },
 
+    {
+        type: "input",
+        name: "contributing",
+        message: "Please list your collaborators, if any, and their GitHub profiles if applicable.",
+    },
+    
     {
         type: "input",
         name: "tests",
@@ -42,15 +49,14 @@ const questions = [
 
     {
         type: "input",
-        name: "credits",
-        message: "Please list your collaborators, if any, and their GitHub profiles if applicable.",
+        name: "github",
+        message: "Please provide your GitHub username?",
     },
 
     {
-        type: "list",
-        name: "license",
-        message: "Please choose a license for your project.",
-        choices: ["MIT", "GPLv2", "Apache"],
+        type: "input",
+        name: "email",
+        message: "Please provide your email address.",
     },
 ];
 
