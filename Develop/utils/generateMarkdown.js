@@ -2,16 +2,16 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license === "MIT") {
-    return "[![${license} badge](https://img.shields.io/badge/license-MIT-red.svg)]"
+    return "![${license} badge](https://img.shields.io/badge/license-MIT-red.svg)"
   
   } else if (license === "GNU GPLv2") {
-    return "[![${license} badge](https://img.shields.io/badge/license-GPLv3-orange.svg)]"
+    return "![${license} badge](https://img.shields.io/badge/license-GPLv3-orange.svg)"
   
   } else if (license === "Apache") {
-    return "[![License](https://img.shields.io/badge/License-Apache_2.0-yellow.svg)]"
+    return "![License](https://img.shields.io/badge/License-Apache_2.0-yellow.svg)"
   
   } else if (license === "Mozilla") {
-    return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-green.svg)]"
+    return "![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-green.svg)"
   
   } else {
     return ""
@@ -45,7 +45,7 @@ function renderLicenseSection(license) {
     return ""
 
   } else {
-    return `## Licenses  This application is covered under the: ${data.license} license. Follow the link for more info: ${renderLicenseLink(data.license)}`
+    return `This application is covered under the: ${license} license. Follow the link for more info: ${renderLicenseLink(license)}`
   }
 }
 
@@ -73,7 +73,7 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## License
-  ${renderLicenseSection}
+  ${renderLicenseSection(data.license)}
 
   ## Contributing
   ${data.contributing}
@@ -83,8 +83,10 @@ function generateMarkdown(data) {
 
   ## Questions
   Have any questions, reach me at these links:
+  <br>
   GitHub: https://github.com/${data.github}
-  Email: ${data.email}`;
+  <br>
+  Email: ${data.email}`
 }
 
 module.exports = generateMarkdown;
