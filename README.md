@@ -11,7 +11,7 @@ A command line application that creates a professional README.md file based off 
 ## Usage
 Application will run when the command "node index.js" is run in the intergrated terminal.  
 User will then answer multiple questions based on their project and when finished a README.md file will be created for them.  
-Below is a screenshot of a example README.md file with this information creating from the application and below that is a link to a video demostration.  
+Below is a screenshot of a example README.md file with this information created from the application and below that is a link to a video demostration.  
 
 ![alt text](./assets/images/README%20Example.png)  
 
